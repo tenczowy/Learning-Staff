@@ -122,3 +122,92 @@
 //   .catch((error) => {
 //     console.log('Error:', error.message);
 //   });
+
+// function operation1() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       console.log('Operation 1 Completed!');
+//       resolve();
+//     }),
+//       1000;
+//   });
+// }
+
+// function operation2() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       console.log('Operation 2 Completed!');
+//       resolve();
+//     }),
+//       500;
+//   });
+// }
+
+// function operation3() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       console.log('Operation 3 Completed!');
+//       resolve();
+//     }),
+//       1500;
+//   });
+// }
+
+// async function performOperations() {
+//   try {
+//     await operation1();
+//     await operation3();
+//     await operation2();
+//   } catch {
+//     console.log('ERROR');
+//   }
+// }
+
+// performOperations();
+
+// const urls = [
+//   'https://jsonplaceholder.typicode.com/todos/1',
+//   'https://jsonplaceholder.typicode.com/todos/2',
+//   'https://jsonplaceholder.typicode.com/todos/3',
+// ];
+
+// function fetchUrl(url) {
+//   return fetch(url).then((response) => {
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! Status: ${response.status}`);
+//     }
+//     return response.json();
+//   });
+// }
+
+// function fetchMultiple(urls) {
+//   const promises = urls.map((url) => fetchUrl(url));
+
+//   return Promise.all(promises);
+// }
+
+// const data = fetchMultiple(urls)
+//   .then((results) => {
+//     return results;
+//   })
+//   .then((data) => data.json());
+
+// console.log(data);
+
+// const randObj = {
+//   name: 'daniel',
+//   surname: 'brodowski',
+//   friends: [
+//     {
+//       name: 'Medina',
+//       surname: 'Abudula',
+//     },
+//     {
+//       name: 'Sulwek',
+//       surname: 'Brodowski',
+//     },
+//   ],
+//   age: 26,
+// };
+
+// console.log(JSON.stringify(randObj));
